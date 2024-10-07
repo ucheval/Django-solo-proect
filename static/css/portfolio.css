@@ -1,0 +1,100 @@
+
+/* Custom CSS styles */ 
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+/* Adjust the header styles */
+header {
+    background-color: #4267B2;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+
+/* Adjust the container styles */
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h2{
+    font-size: 18px;
+    color: #08539e;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+/* Adjust form input styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #4267B2;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Adjust button styles */
+.btn-primary {
+    padding: 12px 24px;
+    background-color: #4267B2;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #3b5998;
+}
+
+/* Adjust footer styles */
+.footer {
+    background-color: #08539e;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    /* position: fixed; */
+    /* bottom: 0; */
+    width: 100%;
+}
+
+.footer p {
+    margin-bottom: 0;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.footer a {
+    color: #7e6e6e;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
