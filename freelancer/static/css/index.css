@@ -1,0 +1,1314 @@
+
+  /* Custom CSS */
+body {
+  font-family: Arial, sans-serif;
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.frelance-main-area {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #f9fafa; /* Light gray background */
+}
+
+.jumbotron {
+  background: url('../freelance-images/freelance-photo-landing.jpeg') no-repeat center center;
+  background-size: cover;
+  padding: 20px;
+  text-align: center;
+  height: 90vh;
+  margin: auto;
+  border-radius: 20px;
+}
+
+.jumbotron> .container {
+  position: relative;
+  margin-top: 156px;
+  width: 60%;
+  border-radius: 10px;
+  height: fit-content;
+}
+
+.jumbotron h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: -4.5px -1.5px 0px #0072ab; /* Apply text shadow */
+  border-radius: 10px;
+}
+
+.other-detail {
+  padding: 0px 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.jumbotron p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f9f9f8; /* Dark gray */
+  text-shadow: -2.0px -1.5px 0px #343a40;
+  background-color: #0072ab;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* btn area */
+.btn-area {
+  position: relative;
+}
+
+.btn-get-started {
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding: 15px 40px;
+  border-radius: 30px;
+  position: relative;
+  bottom: -90px;
+  background-color: #0072ab; /* Dark blue */
+  border: 2px solid #fbfbfa; /* Golden yellow */
+  color: #ffffff; /* Golden yellow */
+}
+
+.btn-get-started:hover {
+  background-color: #ffcc08; /* Golden yellow */
+  color: #0066cc; /* Dark blue */
+}
+
+/* future section styles */
+.feature-section {
+  padding: 80px 0px;
+  margin-bottom: 50px;
+  background-color: #ccc8c8; /* White background */
+}
+
+.feature-heading-area {
+  background-color: #f5f6f6;
+  padding: 0px 10px;
+  border-radius: 10px;
+}
+
+.feature-heading {
+  font-size: 2.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  text-transform: uppercase;
+  text-shadow: -3px -1px 0px #3d3d3c;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #fefefe; /* Dark blue */
+  border: 1px solid #0072ab; /* Dark blue */
+  background-color: #0072ab;
+  padding: 10px 20px; /* Add padding for better visibility */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.col-md-3 {
+  background-color: #0072ab; /* Dark gray */
+  border-radius: 10px;
+}
+
+.feature-item {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+  color: #343a40;
+  padding: 1px;
+  border-radius: 50%;
+  box-shadow: 1px 0px 1px;
+
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.feature-description {
+  font-size: 1.25rem;
+  margin-top: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+.benefits-section {
+  padding: 80px 0;
+  text-align: center;
+  background-color:  rgb(194, 193, 193); /* Light gray background */
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.benefits-heading {
+  text-transform: uppercase;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+  color: #fcfbfa;
+  background-color: #0072ab;
+  box-shadow: 0px 0px 3px #ffffff; /* Hover shadow */
+  border-radius: 10px;
+  text-shadow: -3.5px -1px 1px #343a40; /* Apply text shadow */
+
+}
+
+
+
+.benefits-item {
+  margin-bottom: 20px;
+  padding: 40px 20px;
+  border-radius: 10px;
+  background-color: #ccc8c8; /* White background */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  opacity: 0;                 /*this sets it abstract the animation will bring it back (will work with the animation down the css*/
+  transform: translateY(20px);
+}
+
+/* benefit animation for the cards to be visible after using opacity 0, which is invible */
+/* Animation for all */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bg-primary:hover {
+  transform: translateY(-10px);
+  box-shadow: 5px 5px 5px #ffd700; 
+}
+
+.bg-success:hover{
+  transform: translateY(-10px);
+  box-shadow: 5px 5px 5px #ffd700; 
+}
+
+.bg-warning:hover {
+  transform: translateY(-10px);
+  box-shadow: 5px 5px 5px #fff099; 
+}
+ 
+.bg-info:hover {
+  transform: translateY(-10px);
+  box-shadow: 5px 5px 5px #ffd700; 
+}
+.benefit-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+/* because the page is hiden, this will control how its ben visible when you open page, without this, page will not show */
+.benefits-item {
+  animation: fadeIn 0.5s ease forwards;
+  animation-delay: 0.2s;
+}
+
+
+/* Background color classes */
+.bg-primary {
+  background-color: #0072ab; /* Blue */
+  color: #fff; /* White text */
+  box-shadow: 0px 0px 10px #ffffff; /* Hover shadow */
+
+}
+
+.bg-success {
+  background-color: #28a745; /* Green */
+  color: #fff; /* White text */
+  box-shadow: 0px 0px 10px #ffc107; /* Hover shadow */
+
+}
+
+.bg-warning{
+  background-color: #ffc107; /* Yellow */
+  color: #343a40; /* Dark gray text */
+  box-shadow: 0px 0px 10px #ffffff; /* Hover shadow */
+
+}
+
+.bg-info {
+  background-color: #17a2b8; /* Cyan */
+  color: #fff; /* White text */
+  box-shadow: 0px 0px 10px #ffffff; /* Hover shadow */
+
+}
+
+
+/* end of benefit section */
+.testimonial-section {
+  background-color: #ffffff;
+  padding: 20px 0px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 40px 0px;
+}
+
+.testimonial-item {
+  background-image: radial-gradient(rgb(242, 242, 242), #4891ea, #0072ab);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px #3d3d3c;
+}
+
+.testimonial-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 5px 5px 5px #ffd700;
+  font-weight: bold;
+}
+
+.testimonial-heading {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  font-weight: bolder;
+  margin-bottom: 30px;
+  box-shadow: 0px 0px 10px gray;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #0072ab;
+  text-shadow: -3px 1px 0px #bdbdbd;
+  margin: 40px 0px;
+}
+
+.testimonial-item {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.testimonial-text {
+  font-size: 1.25rem;
+  margin-top: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  /* padding: 20px 0; */
+  border-radius: 10px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 20px 0px;
+}
+
+.footer-section {
+  flex: 1;
+  .
+  /* margin-right: 20px; */
+}
+.footer-section:nth-last-child(2) {
+  margin-left: 50px;
+}
+
+.footer-section:nth-last-child(1) {
+  margin-left: 100px;
+}
+
+.footer-section h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  color: #fff;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  border-top: 2px solid #f9f9f8;
+  padding-top: 10px;
+  font-size: 0.8rem;
+  color: #d4d4d4;
+}
+
+
+
+.navbar-brand img {
+  height: 50px;
+}
+
+.nav-link {
+  color: #333;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: #0072ab;
+}
+
+
+.social-meia-links{
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 20px;
+  font-size: 25px;
+  
+}
+.social-meia-links a{
+  text-decoration: none;
+  color: gold;
+  background-color: #0080ff;
+  padding: 5px;
+  border-radius: 50%;
+  box-shadow: -3px -1px 0px #ffd700;
+  
+}
+
+.fa-facebook-f:hover{
+  transform: translateY(10px);
+}
+.fa-instagram:hover{
+  transform: translateY(10px);
+}
+
+.fa-twitter:hover{
+  transform: translateY(10px);
+}
+.fa-tiktok:hover{
+  transform: translateY(10px);
+}
+
+.social-space{
+  background-color: white;
+  padding: 0.1px;
+}
+
+
+
+
+@media (max-width: 1200px) and (min-width:991px) {
+  .jumbotron> .container {
+    width: 70%;
+  }
+
+  .benefits-heading {
+    font-size: 2.5rem;
+  }
+
+  .testimonial-heading {
+    font-size: 2.5rem;
+  }
+
+  .feature-heading {
+    font-size: 2rem;
+  }
+
+  .feature-title {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 992px)and (min-width:704px) {
+  .jumbotron> .container {
+    width: 100%;
+  }
+
+
+  .jumbotron> .container {
+  margin-top: 80px;
+  width: 100%;
+  
+}
+
+.jumbotron h1 {
+  padding: 0px 10px;
+  border-radius: 10px;
+}
+
+.jumbotron p {
+  font-size: 18px;
+  padding: 10px;
+}
+
+/* btn area */
+
+.btn-get-started {
+  font-size: 18px;
+  padding: 15px 30px;
+  bottom: -40px;
+
+}
+
+
+.feature-heading {
+  font-size: 1.5rem;
+  padding: 10px 20px; /* Add padding for better visibility */
+  border-radius: 10px; /* Rounded corners */
+}
+
+  .feature-title {
+    font-size: 1.25rem;
+  }
+
+ 
+
+  
+/* future section styles */
+.feature-section {
+  padding: 20px 0px;
+  margin-bottom: 30px;
+  background-color: #ccc8c8; /* White background */
+}
+
+
+.feature-heading-area {
+  background-color: #f5f6f6;
+  padding: 0px 10px;
+  border-radius: 10px;
+}
+
+
+.feature-icon {
+  font-size: 1.5rem;
+  color: #343a40;
+  padding: 1px;
+  border-radius: 50%;
+  box-shadow: 1px 0px 1px;
+
+}
+
+.feature-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.feature-description {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+ /* benefits */
+ 
+.benefits-section {
+  padding: 80px 0;
+  text-align: center;
+  background-color:  rgb(194, 193, 193); /* Light gray background */
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.benefits-heading {
+ 
+  font-size: 2rem;
+  
+
+}
+
+
+
+.benefits-item {
+  margin-bottom: 20px;
+  padding: 20px 20px;
+}
+
+  /* testimonials */
+
+/* end of benefit section */
+.testimonial-section {
+  background-color: #ffffff;
+  padding: 20px 0px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 40px 0px;
+}
+
+.testimonial-item {
+  background-image: radial-gradient(rgb(242, 242, 242), #4891ea, #0072ab);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px #3d3d3c;
+}
+
+.testimonial-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 5px 5px 5px #ffd700;
+  font-weight: bold;
+}
+
+.testimonial-heading {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  padding: 10px;
+  margin: 30px 0px;
+}
+
+.testimonial-item {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  margin-top: 10px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* footer */
+
+.footer{
+  width: 100%;
+  padding-left: 30px;
+  
+  
+  
+}
+
+.footer-content{
+  padding: 10px 0px;
+  
+}
+
+.footer-section{
+  width: 100%;
+  margin: 0px 3px;
+  
+}
+
+.footer>.container{
+  margin: 0;
+  padding: 0px;
+  text-align: center;
+  position: relative;
+  
+}
+
+
+
+.social-meia-links{
+  width: 40%;
+  padding: 0px 20px;
+    font-size: 20px;
+}
+.social-meia-links a{
+  background-color: #0080ff;
+  padding: 5px;
+
+  
+}
+
+.fa-facebook-f:hover{
+  transform: translateY(10px);
+}
+.fa-instagram:hover{
+  transform: translateY(10px);
+}
+
+.fa-twitter:hover{
+  transform: translateY(10px);
+}
+.fa-tiktok:hover{
+  transform: translateY(10px);
+}
+
+.social-space{
+  background-color: white;
+  padding: 0.1px;
+}
+
+}
+
+@media (max-width: 768px)and (min-width:570px) {
+  .jumbotron> .container {
+    width: 90%;
+  }
+
+
+  .jumbotron> .container {
+  margin-top: 120px;
+  width: 100%;
+  
+}
+
+.jumbotron h1 {
+  padding: 0px 0px;
+  font-size: 2.5rem;
+  color: #daa520;
+}
+
+.jumbotron p {
+  font-size: 15px;
+  padding: 10px;
+}
+
+/* btn area */
+
+.btn-get-started {
+  font-size: 18px;
+  padding: 10px 20px;
+  bottom: -40px;
+
+}
+
+
+.feature-heading {
+  font-size: 1.5rem;
+  padding: 10px 20px; /* Add padding for better visibility */
+  border-radius: 10px; /* Rounded corners */
+}
+
+  .feature-title {
+    font-size: 1.25rem;
+  }
+
+ .feature{
+  margin: 3px;  
+    /* to give a gap on the card in colume */
+ }
+
+  
+/* future section styles */
+.feature-section {
+  padding: 8px 0px;
+}
+
+
+.feature-heading-area {
+  background-color: #f5f6f6;
+  padding: 0px 8px;
+  border-radius: 10px;
+}
+
+
+.feature-icon {
+  font-size: 1rem;
+  color: #343a40;
+  padding: 1px;
+  border-radius: 50%;
+  box-shadow: 1px 0px 1px;
+}
+
+.feature-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.feature-description {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+ /* benefits */
+ 
+.benefits-section {
+  padding: 40px 0;
+  text-align: center;
+  background-color:  rgb(194, 193, 193); /* Light gray background */
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.benefits-heading {
+ 
+  font-size: 1.5rem;
+  
+
+}
+
+
+
+.benefits-item {
+  margin-bottom: 10px;
+  padding: 10px 10px;
+  font-size: 15px;
+}
+
+  /* testimonials */
+
+/* end of benefit section */
+.testimonial-section {
+  background-color: #ffffff;
+  padding: 10px 0px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 10px 0px;
+}
+
+.testimonial-item {
+  background-image: radial-gradient(rgb(242, 242, 242), #4891ea, #0072ab);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px #3d3d3c;
+}
+
+.testimonial-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 5px 5px 5px #ffd700;
+  font-weight: bold;
+}
+
+.testimonial-heading {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  padding: 10px;
+  margin: 30px 0px;
+}
+
+.testimonial-item {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  margin-top: 10px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* footer */
+
+.footer{
+  width: 100%;
+  padding-left: 30px;
+  
+  
+  
+}
+
+.footer-content{
+  padding: 10px 0px;
+  
+}
+
+.footer-section{
+  width: 100%;
+  margin: 0px 3px;
+  
+}
+
+.footer>.container{
+  margin: 0;
+  padding: 0px;
+  text-align: center;
+  position: relative;
+  
+}
+
+
+
+
+.social-meia-links{
+  width: 40%;
+  padding: 0px 20px;
+    font-size: 20px;
+}
+.social-meia-links a{
+  background-color: #0080ff;
+  padding: 5px;
+  font-size: 12px;
+
+  
+}
+
+.fa-facebook-f:hover{
+  transform: translateY(10px);
+}
+.fa-instagram:hover{
+  transform: translateY(10px);
+}
+
+.fa-twitter:hover{
+  transform: translateY(10px);
+}
+.fa-tiktok:hover{
+  transform: translateY(10px);
+}
+
+.social-space{
+  background-color: white;
+  padding: 0.1px;
+}
+}
+
+
+/* iphone 6 7 8 */
+@media (max-width: 576px) and (min-width:310px) {
+ 
+ 
+  .jumbotron> .container {
+    width: 90%;
+  }
+
+
+  .jumbotron> .container {
+  margin-top: 170px;
+  width: 100%;
+  
+}
+
+.jumbotron h1 {
+  padding: 0px 0px;
+  font-size: 1.5rem;
+  color: #0072ab;
+  text-shadow: -2px 0px 1px #fafcfc;
+}
+
+.jumbotron p {
+  font-size: 12px;
+  padding: 10px;
+}
+
+/* btn area */
+
+.btn-get-started {
+  font-size: 15px;
+  padding: 8px 15px;
+  bottom: -80px;
+
+}
+
+
+.feature-heading {
+  font-size: 1.5rem;
+  padding: 10px 20px; /* Add padding for better visibility */
+  border-radius: 10px; /* Rounded corners */
+}
+
+  .feature-title {
+    font-size: 1.25rem;
+  }
+
+ .feature{
+  margin: 3px;  
+    /* to give a gap on the card in colume */
+ }
+
+  
+/* future section styles */
+.feature-section {
+  padding: 8px 0px;
+}
+
+
+.feature-heading-area {
+  background-color: #f5f6f6;
+  padding: 0px 8px;
+  border-radius: 10px;
+}
+
+
+.feature-icon {
+  font-size: 1rem;
+  color: #343a40;
+  padding: 1px;
+  border-radius: 50%;
+  box-shadow: 1px 0px 1px;
+}
+
+.feature-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.feature-description {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+ /* benefits */
+ 
+.benefits-section {
+  padding: 40px 0;
+  text-align: center;
+  background-color:  rgb(194, 193, 193); /* Light gray background */
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.benefits-heading {
+ 
+  font-size: 1.5rem;
+  
+
+}
+
+
+
+.benefits-item {
+  margin-bottom: 10px;
+  padding: 10px 10px;
+  font-size: 15px;
+}
+
+  /* testimonials */
+
+/* end of benefit section */
+.testimonial-section {
+  background-color: #ffffff;
+  padding: 10px 0px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 10px 0px;
+}
+
+.testimonial-item {
+  background-image: radial-gradient(rgb(242, 242, 242), #4891ea, #0072ab);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px #3d3d3c;
+}
+
+.testimonial-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 5px 5px 5px #ffd700;
+  font-weight: bold;
+}
+
+.testimonial-heading {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  padding: 10px;
+  margin: 30px 0px;
+}
+
+.testimonial-item {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  margin-top: 10px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* footer */
+
+.footer{
+  width: 100%;
+  padding-left: 0px;
+  
+  
+  
+}
+
+
+
+.footer-content{
+  padding: 10px 0px;
+  
+}
+
+.footer-section{
+  width: 100%;
+  margin: 0px 3px;
+font-size: 10px;
+  
+}
+
+.footer-section>p{
+  font-size: 10px;
+}
+
+.footer>.container{
+  margin: 0;
+  padding: 0px;
+  text-align: center;
+  position: relative;
+  
+}
+
+
+
+
+.social-meia-links{
+  width: 40%;
+  padding: 0px 20px;
+    font-size: 20px;
+}
+.social-meia-links a{
+  background-color: #0080ff;
+  padding: 2px;
+  font-size: 10px;
+
+  
+}
+
+.fa-facebook-f:hover{
+  transform: translateY(10px);
+}
+.fa-instagram:hover{
+  transform: translateY(10px);
+}
+
+.fa-twitter:hover{
+  transform: translateY(10px);
+}
+.fa-tiktok:hover{
+  transform: translateY(10px);
+}
+
+.social-space{
+  background-color: white;
+  padding: 0.1px;
+}
+}
+
+@media (max-width: 320px) and (min-width:150px) {
+  .jumbotron> .container {
+    width: 90%;
+  }
+
+
+  .jumbotron> .container {
+  margin-top: 120px;
+  width: 100%;
+  
+}
+
+.jumbotron h1 {
+  padding: 0px 0px;
+  font-size: 1.5rem;
+  margin-top: 10px;
+  
+}
+
+.jumbotron p {
+  font-size: 15px;
+  padding: 5px;
+}
+
+/* btn area */
+
+.btn-get-started {
+  font-size: 15px;
+  padding: 50px 10px;
+  bottom: -20px;
+
+}
+
+
+.feature-heading {
+  font-size: 1rem;
+  padding: 10px 20px; /* Add padding for better visibility */
+  border-radius: 10px; /* Rounded corners */
+}
+
+  .feature-title {
+    font-size: 1rem;
+  }
+
+ .feature{
+  margin: 3px;  
+    /* to give a gap on the card in colume */
+ }
+
+  
+/* future section styles */
+.feature-section {
+  padding: 5px 0px;
+}
+
+
+.feature-heading-area {
+  background-color: #f5f6f6;
+  padding: 0px 8px;
+  border-radius: 10px;
+}
+
+
+.feature-icon {
+  font-size: 1rem;
+  color: #343a40;
+  padding: 1px;
+  border-radius: 50%;
+  box-shadow: 1px 0px 1px;
+}
+
+.feature-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.feature-description {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+ /* benefits */
+ 
+.benefits-section {
+  padding: 20px 0;
+  text-align: center;
+  background-color:  rgb(194, 193, 193); /* Light gray background */
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.benefits-heading {
+ 
+  font-size: 1.5rem;
+  
+
+}
+
+
+
+.benefits-item {
+  margin-bottom: 10px;
+  padding: 10px 10px;
+  font-size: 15px;
+}
+
+  /* testimonials */
+
+/* end of benefit section */
+.testimonial-section {
+  background-color: #ffffff;
+  padding: 10px 0px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 10px 0px;
+}
+
+.testimonial-item {
+  background-image: radial-gradient(rgb(242, 242, 242), #4891ea, #0072ab);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px #3d3d3c;
+}
+
+.testimonial-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 5px 5px 5px #ffd700;
+  font-weight: bold;
+}
+
+.testimonial-heading {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  padding: 10px;
+  margin: 30px 0px;
+}
+
+.testimonial-item {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  margin-top: 10px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* footer */
+
+.footer{
+  width: 100%;
+  padding-left: 0px;
+  
+  
+  
+}
+
+
+
+.footer-content{
+  padding: 10px 0px;
+  
+}
+
+.footer-section{
+  width: 100%;
+  margin: 0px 3px;
+font-size: 10px;
+  
+}
+
+.footer-section>p{
+  font-size: 10px;
+}
+
+.footer>.container{
+  margin: 0;
+  padding: 0px;
+  text-align: center;
+  position: relative;
+  
+}
+
+
+
+
+.social-meia-links{
+  width: 40%;
+  padding: 0px 20px;
+    font-size: 20px;
+}
+.social-meia-links a{
+  background-color: #0080ff;
+  padding: 2px;
+  font-size: 10px;
+
+  
+}
+
+.fa-facebook-f:hover{
+  transform: translateY(10px);
+}
+.fa-instagram:hover{
+  transform: translateY(10px);
+}
+
+.fa-twitter:hover{
+  transform: translateY(10px);
+}
+.fa-tiktok:hover{
+  transform: translateY(10px);
+}
+
+.social-space{
+  background-color: white;
+  padding: 0.1px;
+}
+}

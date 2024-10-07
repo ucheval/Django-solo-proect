@@ -1,0 +1,1439 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Freelancer Connect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/freelancedashboard.css' %}">
+
+
+
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container nav-flex">
+                <div class=" navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <a class="navbar-brand" href="freelancedashboard.html">Freelancer Connect</a>
+
+                        <li class="nav-item">
+                            <a class="nav-link " href="freelancedashboard.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./profile.html">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./freelancer-search.html">Search</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./messenger.html">Messenger</a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="search-container">
+                                <input type="search" name="" id="search" placeholder="Search here" class="search-input">
+                                <i class="fas fa-search search-icon"></i>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="container">
+        <div class="row">
+            <!-- Sidebar Section -->
+            <div class="col-lg-3 prof h-100">
+                <div class="sidebar">
+                    <div class="sidebar-inner">
+                        <h3 class="sidebar-title">Explore Categories</h3>
+                        <ul class="sidebar-list">
+                        <li class="sidebar-item">
+                                <i class="fas fa-duotone fa-user"></i>
+                                <a href="#" class="sidebar-link" id="category-all">All Categories</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <i class="fas fa-laptop-code"></i>
+                                <a href="#" class="sidebar-link" id="category-all">Web Development</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <i class="fas fa-paint-brush"></i>
+                                <a href="#" class="sidebar-link" id="category-graphic-design">Graphic Design</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <i class="fas fa-edit"></i>
+                                <a href="#" class="sidebar-link" id="category-copywriting">Copywriting</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <i class="fas fa-chart-line"></i>
+                                <a href="#" class="sidebar-link" id="category-digital-marketing">Digital Marketing</a>
+                            </li>
+                        </ul>
+                        <h3 class="sidebar-title">Browse Projects</h3>
+                        <ul class="sidebar-list">
+                            <li class="sidebar-item">
+                                <i class="fas fa-laptop-code"></i>
+                                <a href="#" class="sidebar-link" id="projects-web-development">Web Development</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <i class="fas fa-paint-brush"></i>
+                                <a href="#" class="sidebar-link" id="projects-graphic-design">Graphic Design</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <i class="fas fa-edit"></i>
+                                <a href="#" class="sidebar-link" id="projects-copywriting">Copywriting</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <i class="fas fa-chart-line"></i>
+                                <a href="#" class="sidebar-link" id="projects-digital-marketing">Digital Marketing</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Section -->
+            
+            <div class="col-lg-6 caro col-mb-4"> 
+                <div class="my-carousel m-0">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{% static 'freelance-images/dev.jpg' %}" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static 'freelance-images/male cook.jpg' %}" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static 'freelance-images/222450131-happy-male-technician-repairing-air-conditioner.jpg' %}" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static 'freelance-images/221380806-african-american-foreman-manager-standing-in-the-construction-site-with-blueprints-looking-around.jpg' %}" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static 'freelance-images/33804750-close-up-of-black-woman-doctor-looking-at-camera.jpg' %}" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static 'freelance-images/60505712-happy-young-african-male-plumber-using-plunger-in-bathroom-sink.jpg' %}" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static 'freelance-images/freelance-labour-connect .jpeg' %}" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static 'freelance-images/104266395-concentrated-african-american-glazier-working-with-glass-on-stationary-drilling-machine-in-workroom.jpg' %}" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static 'freelance-images/freelance-photo-landing.jpeg' %}" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static 'freelance-images/company-4.JPG' %}" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+
+            <!-- Profile Section -->
+            <div class="col-lg-3 rounded-4  owner-pro h100" >
+                <div class="round-inner">
+                    <div class="profilearea" id="profileContainer">
+                        <!-- Profile card will be dynamically generated here --> 
+                    </div>
+                </div>
+
+            </div>
+            
+
+        </div>
+    </div>
+
+    <!-- Random Users Section -->
+    <div class="randomusers-container">
+        <div class="col mt-1 derandom">
+            <div class="random">
+            <h2 class="text-center mb-2">Connecting Talents: Freelancer Hiring Across All Industries (Hire at Ease)</h2>
+            <div class="row" id="randomUsersContainer" >
+                <!-- Random user cards will be dynamically generated here -->
+            </div>
+        
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row timelineandjob">
+            <!-- Available jobs column -->
+            <div class="col-lg-3 h-100 job-container">
+                <div class="available-jobs">
+                    <h2>Available jobs</h2>
+                    <div class="other-feeds" id="jobList">
+                        <!-- Other feed items will be dynamically added here -->
+                    </div>
+                </div>
+            </div>
+         
+            <!-- Feed container -->
+
+            <div class="col-lg-9 timeline">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="feed-container">
+                            <h2>Timeline feeds from users all around the world</h2>
+                            <!-- Post Form -->
+                            <form id="postForm" enctype="multipart/form-data">
+                                <div class="post-container">
+                                    <textarea id="postContent" placeholder="What is new? Show it to the world"></textarea>
+                                    <div class="post-options">
+                                        <input type="file" id="fileInput" accept="image/*, video/*" multiple style="display: none;">
+                                        <label for="fileInput">
+                                            <i class="fas fa-camera" style="font-size: 24px; color: #4267B2; cursor: pointer;"></i>
+                                        </label>
+                                        <button type="submit">Post</button>
+                                    </div>
+                                </div>
+                            </form>
+                            
+                            <!-- End of Post Form -->
+                    
+                        <div class="feeds-container-area">
+                            <div class="feeds" id="feeds">
+                                <!-- Feed items will be dynamically added here -->
+                            </div>
+                            <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="videoModalLabel">Video</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <video controls id="modalVideo" style="width: 100%; height: auto;">
+                                                <source src="" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                   
+                            <!-- End of Feeds Section -->
+                        </div>
+                        <!-- End of feed-container -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum, ligula nec blandit consequat, lectus eros viverra nulla, ac dapibus velit mi et sem.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>123 Main Street<br>City, Country<br>Email: info@example.com<br>Phone: +1234567890</p>
+                </div>
+            </div>
+            <div class="social-meia-links">
+                <div class="social-space"></div>
+                <div class="facebook"> <a href=""><i class="fab fa-facebook-f"></i></a></div>
+                <div class="social-space"></div>
+                <div class="instagram"><a href=""><i class="fab fa-instagram"></i></a></i></div>
+                <div class="social-space"></div>
+                <div class="twitter-x"><a href=""><i class="fab fa-twitter"></i></a></div>
+                <div class="social-space"></div>
+                <div class="tiktok"><a href=""><i class="fab fa-tiktok"></i></a></div>
+                <div class="social-space"></div>
+              </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Freelancer Connect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript for generating profile cards when there is no user -->
+    <script>
+        // I Defined a default profile
+        const defaultProfile = {
+            id: 13,
+            name: "Valentine Uchenna",
+            category: "Web Developer",
+            skills: ["HTML", "CSS", "JavaScript"],
+            img: "./freelance-images/uche.jpg",
+            bio: "Experienced web developer.",
+            profileLink: "./view-portfolio-and-profile.html", // Updated link
+        };
+    
+        // Function to generate the profile card
+        function generateDefaultProfileCard() {
+            // Create elements for profile card
+            let profileContainer = document.getElementById('profileContainer');
+            let profileCard = document.createElement('div');
+            profileCard.classList.add('profilearea', 'profilearea-profile-card');
+    
+            // Profile image
+            let profileImage = document.createElement('img');
+            profileImage.src = defaultProfile.img;
+            profileImage.classList.add('profilearea-profile-image');
+            profileImage.alt = 'Profile Image';
+    
+            // Profile name
+            let profileName = document.createElement('h3');
+            profileName.classList.add('profilearea-profile-name');
+            profileName.textContent = defaultProfile.name;
+    
+            // Profile category
+            let profileCategory = document.createElement('h4');
+            profileCategory.classList.add('profilearea-category');
+            profileCategory.textContent = defaultProfile.category;
+    
+            // Profile bio
+            let profileInfo = document.createElement('p');
+            profileInfo.classList.add('profilearea-item-text');
+            profileInfo.textContent = defaultProfile.bio;
+    
+            // View profile link
+            let viewProfileLink = document.createElement('a');
+            viewProfileLink.href = defaultProfile.profileLink; // Updated link
+            viewProfileLink.classList.add('btn', 'btn-primary', 'profilearea-btn-primary');
+            viewProfileLink.textContent = 'Profile & Portfolio';
+    
+            // Append elements to profile card......to..add..to..DOM
+            profileCard.appendChild(profileImage);
+            profileCard.appendChild(profileName);
+            profileCard.appendChild(profileCategory);
+            profileCard.appendChild(profileInfo);
+            profileCard.appendChild(viewProfileLink);
+    
+            // Append profile card to container
+            profileContainer.appendChild(profileCard);
+        }
+    
+        // Call the function to generate the default profile card when the page loads
+        window.onload = generateDefaultProfileCard;
+    </script>
+    
+ <!-- // Retrieve profile data from local storage profile signup-->
+<!-- <script>
+        // Retrieve profile data from local storage
+let storedProfiles = localStorage.getItem('profiles');
+if (storedProfiles) {
+    profiles = JSON.parse(storedProfiles);
+}
+
+// Function to generate profile card for the first profile (either from local storage or default profiles)
+function generateSingleProfileCard() {
+    let profileContainer = document.getElementById('profileContainer');
+    profileContainer.innerHTML = ''; // Clear previous profile card
+
+    // Get the first profile from either stored profiles or default profiles
+    let profile = profiles.length > 0 ? profiles[0] : demoProfile;
+
+    // Create profile card elements
+    let profileCard = document.createElement('div');
+    profileCard.classList.add('profilearea', 'profilearea-profile-card');
+
+    let profileImage = document.createElement('img');
+    profileImage.src = profile.profilePicture; // Assuming you have a profile picture URL in the profile object
+    profileImage.classList.add('profilearea-profile-image');
+    profileImage.alt = 'Profile Image';
+
+    let profileName = document.createElement('h3');
+    profileName.classList.add('profilearea-profile-name');
+    profileName.textContent = profile.fullName;
+
+    let profileCategory = document.createElement('h4');
+    profileCategory.classList.add('profilearea-category');
+    profileCategory.textContent = profile.skills.join(', '); // Assuming skills is an array of strings
+
+    let profileInfo = document.createElement('p');
+    profileInfo.classList.add('profilearea-item-text');
+    profileInfo.textContent = profile.bio;
+
+    let viewProfileLink = document.createElement('a');
+    viewProfileLink.href = '#'; // Link to user's profile page
+    viewProfileLink.classList.add('btn', 'btn-primary', 'profilearea-btn-primary');
+    viewProfileLink.textContent = 'View Profile & Portfolio';
+
+    // Append elements to profile card
+    profileCard.appendChild(profileImage);
+    profileCard.appendChild(profileName);
+    profileCard.appendChild(profileCategory);
+    profileCard.appendChild(profileInfo);
+    profileCard.appendChild(viewProfileLink);
+
+    // Append profile card to container
+    profileContainer.appendChild(profileCard);
+}
+
+// Generate profile card when the page loads
+generateSingleProfileCard();
+
+    </script> -->
+
+    <!-- Default array of sample profiles -->
+    <script>
+        // Base URL for images
+        const imageBaseUrl = "{% static 'freelance/freelance-images/' %}";
+
+        // Define your default array of random profiles
+        const defaultProfiles = [
+        {
+        id: 1,
+        name: "John Doe",
+        category: "Web Developer",
+        skills: ["HTML", "CSS", "JavaScript"],
+        img: `${imageBaseUrl}profile-1.jpeg`,
+        bio: "Experienced web developer with expertise in front-end technologies.",
+        contact: "john@example.com",
+        },
+        {
+        id: 2,
+        name: "Jane Smith",
+        category: "Graphic Designer",
+        skills: ["Photoshop", "Illustrator", "InDesign"],
+        img: `${imageBaseUrl}profile-2.jpeg`,
+        bio: "Passionate graphic designer specializing in branding and illustration.",
+        contact: "jane@example.com",
+        },
+     {
+        id: 3,
+        name: "Alex Johnson",
+        category: "Copywriter",
+        skills: ["Copywriting", "Content Marketing", "SEO"],
+        img: `${imageBaseUrl}profile-3.jpeg`,
+        bio: "Experienced copywriter with a knack for crafting compelling content.",
+        contact: "alex@example.com",
+    },
+    {
+        id: 4,
+        name: "Alex Johnson",
+        category: "Copywriter",
+        skills: ["Copywriting", "Content Marketing", "SEO"],
+        img: `${imageBaseUrl}profile-4.jpeg`,        
+        bio: "Experienced copywriter with a knack for crafting compelling content.",
+        contact: "alex@example.com",
+    },
+    {
+        id: 5,
+        name: "Alex Johnson",
+        category: "Copywriter",
+        skills: ["Copywriting", "Content Marketing", "SEO"],
+        img: `${imageBaseUrl}profile-5.jpeg`,        
+        bio: "Experienced copywriter with a knack for crafting compelling content.",
+        contact: "alex@example.com",
+    },
+    {
+        id: 6,
+        name: "Alex Johnson",
+        category: "Copywriter",
+        skills: ["Copywriting", "Content Marketing", "SEO"],
+        img: `${imageBaseUrl}profile-6.jpeg`,        
+        bio: "Experienced copywriter with a knack for crafting compelling content.",
+        contact: "alex@example.com",
+    },
+    {
+        id: 7,
+        name: "Alex Johnson",
+        category: "Copywriter",
+        skills: ["Copywriting", "Content Marketing", "SEO"],
+        img: `${imageBaseUrl}profile-7.jpeg`,        
+        bio: "Experienced copywriter with a knack for crafting compelling content.",
+        contact: "alex@example.com",
+    },
+    {
+        id: 8,
+        name: "Alex Johnson",
+        category: "Copywriter",
+        skills: ["Copywriting", "Content Marketing", "SEO"],
+        img: `${imageBaseUrl}profile-8.jpeg`,        
+        bio: "Experienced copywriter with a knack for crafting compelling content.",
+        contact: "alex@example.com",
+    },
+    {
+        id: 9,
+        name: "Alex Johnson",
+        category: "Copywriter",
+        skills: ["Copywriting", "Content Marketing", "SEO"],
+        img: `${imageBaseUrl}profile-9.jpeg`,        
+        bio: "Experienced copywriter with a knack for crafting compelling content.",
+        contact: "alex@example.com",
+    },
+    {
+        id: 10,
+        name: "Alex Johnson",
+        category: "Copywriter",
+        skills: ["Copywriting", "Content Marketing", "SEO"],
+        img: `${imageBaseUrl}profile-10.jpeg`,        
+        bio: "Experienced copywriter with a knack for crafting compelling content.",
+        contact: "alex@example.com",
+    },
+    {
+        id: 11,
+        name: "Alex Johnson",
+        category: "Copywriter",
+        skills: ["Copywriting", "Content Marketing", "SEO"],
+        img: `${imageBaseUrl}profile-11.jpeg`,        
+        bio: "Experienced copywriter with a knack for crafting compelling content.",
+        contact: "alex@example.com",
+    },
+    {
+        id: 12,
+        name: "Emily Brown",
+        category: "Web Developer",
+        skills: ["JavaScript", "React", "Node.js"],
+        img: `${imageBaseUrl}profile-12.jpeg`,        
+        bio: "Full-stack developer passionate about creating responsive web applications.",
+        contact: "emily@example.com",
+    },
+    {
+        id: 13,
+        name: "John Doe",
+        category: "Web Developer",
+        skills: ["HTML", "CSS", "JavaScript"],
+        img: `${imageBaseUrl}profile-13.jpeg`,        
+        bio: "Experienced web developer with expertise in front-end technologies.",
+        contact: "john@example.com",
+    },
+    {
+        id: 14,
+        name: "John Doe",
+        category: "Web Developer",
+        skills: ["HTML", "CSS", "JavaScript"],
+        img: `${imageBaseUrl}profile-14.jpeg`,        
+        bio: "Experienced web developer with expertise in front-end technologies.",
+        contact: "john@example.com",
+    },
+    {
+        id: 15,
+        name: "John Doe",
+        category: "Web Developer",
+        skills: ["HTML", "CSS", "JavaScript"],
+        img: `${imageBaseUrl}profile-15.jpeg`,        
+        bio: "Experienced web developer with expertise in front-end technologies.",
+        contact: "john@example.com",
+    },
+    {
+        id: 16,
+        name: "John Doe",
+        category: "Web Developer",
+        skills: ["HTML", "CSS", "JavaScript"],
+        img: `${imageBaseUrl}profile-16.jpeg`,        
+        bio: "Experienced web developer with expertise in front-end technologies.",
+        contact: "john@example.com",
+    },
+    {
+        id: 17,
+        name: "John Doe",
+        category: "Web Developer",
+        skills: ["HTML", "CSS", "JavaScript"],
+        img: `${imageBaseUrl}profile-17.jpeg`,        
+        bio: "Experienced web developer with expertise in front-end technologies.",
+        contact: "john@example.com",
+    },
+    {
+        id: 18,
+        name: "John Doe",
+        category: "Web Developer",
+        skills: ["HTML", "CSS", "JavaScript"],
+        img: `${imageBaseUrl}profile-18.jpeg`,        
+        bio: "Experienced web developer with expertise in front-end technologies.",
+        contact: "john@example.com",
+    },
+    {
+        id: 19,
+        name: "John Doe",
+        category: "Web Developer",
+        skills: ["HTML", "CSS", "JavaScript"],
+        img: `${imageBaseUrl}profile-19.jpeg`,
+        bio: "Experienced web developer with expertise in front-end technologies.",
+        contact: "john@example.com",
+    },
+    {
+        id: 20,
+        name: "John Doe",
+        category: "Web Developer",
+        skills: ["HTML", "CSS", "JavaScript"],
+        img: `${imageBaseUrl}profile-20.jpeg`,
+        bio: "Experienced web developer with expertise in front-end technologies.",
+        contact: "john@example.com",
+    },
+    
+    
+];
+let profiles = [...defaultProfiles];
+
+document.querySelectorAll('.sidebar-link').forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+        if (this.id === 'category-all') {
+            displayAllProfiles();
+        } else {
+            const categoryText = this.textContent.trim();
+            const categoryMap = {
+                'Web Development': 'Web Developer',
+                'Graphic Design': 'Graphic Designer',
+                'Copywriting': 'Copywriter',
+                'Digital Marketing': 'Digital Marketer',
+                'Illustration': 'Illustrator',
+                'Video Editing': 'Video Editor'
+            };
+            const category = categoryMap[categoryText] || categoryText;
+            displayProfilesByCategory(category);
+        }
+    });
+});
+
+function displayProfilesByCategory(category) {
+    const filteredProfiles = profiles.filter(profile => profile.category === category);
+    renderProfiles(filteredProfiles);
+}
+
+function displayAllProfiles() {
+    renderProfiles(profiles);
+}
+
+function renderProfiles(profileList) {
+    const randomUsersContainer = document.getElementById('randomUsersContainer');
+    randomUsersContainer.innerHTML = '';
+    profileList.forEach(profile => {
+        const profileCardf. = document.createElement('div');
+        profileCard.classList.add('col-lg-3', 'profile-card');
+
+        const profileImage = document.createElement('img');
+        profileImage.src = profile.img;
+        profileImage.classList.add('profile-image');
+        profileImage.alt = 'Profile Image';
+
+        const profileName = document.createElement('h3');
+        profileName.classList.add('profile-name');
+        profileName.textContent = profile.name;
+
+        const profileCategory = document.createElement('h4');
+        profileCategory.classList.add('category');
+        profileCategory.textContent = profile.category;
+
+        const profileInfo = document.createElement('p');
+        profileInfo.classList.add('item-text');
+        profileInfo.textContent = profile.bio;
+
+        const linkContainer = document.createElement('div');
+        linkContainer.classList.add('link-container');
+
+        const viewPortfolioLink = document.createElement('a');
+        viewPortfolioLink.href = "./view-portfolio-and-profile.html";
+        viewPortfolioLink.classList.add('btn', 'btn-primary', 'viewportfolio');
+        viewPortfolioLink.textContent = 'CHECK-ME-OUT';
+
+        linkContainer.appendChild(viewPortfolioLink);
+        profileCard.appendChild(profileImage);
+        profileCard.appendChild(profileName);
+        profileCard.appendChild(profileCategory);
+        profileCard.appendChild(profileInfo);
+        profileCard.appendChild(linkContainer);
+        randomUsersContainer.appendChild(profileCard);
+    });
+}
+
+function generateDefaultProfileCards() {
+    renderProfiles(profiles);
+}
+
+document.getElementById('registrationForm')?.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const newProfile = {
+        id: profiles.length + 1,
+        name: document.getElementById('name').value,
+        category: document.getElementById('category').value,
+        skills: document.getElementById('skills').value.split(',').map(skill => skill.trim()),
+        img: document.getElementById('img').value,
+        bio: document.getElementById('bio').value,
+        contact: document.getElementById('contact').value,
+    };
+    profiles.push(newProfile);
+    generateDefaultProfileCards();
+});
+
+// Generate default profile cards when the page loads
+generateDefaultProfileCards();
+    </script>
+
+
+
+<!-- whats on your mind timeline-->
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Append the post form to the top of the timeline
+    const postForm = document.getElementById('postForm');
+    const timeline = document.querySelector('.feed-container');
+    timeline.insertBefore(postForm, timeline.firstChild);
+
+    // Add event listener for comment buttons
+    addCommentEventListeners();
+
+    // Add event listener for form submission (posting new content)
+    postForm.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        // Get the post content from the textarea
+        const postContent = document.getElementById('postContent').value.trim();
+        // Get the files selected by the user
+        const files = Array.from(document.getElementById('fileInput').files);
+
+        if (postContent === '' && files.length === 0) {
+            // If both post content and files are empty, return without posting
+            return;
+        }
+
+        // Simulate posting the content to the server
+        // Here, you can implement the logic to send the post content and files to the server
+        // For demonstration, let's just display the posted content and files in the feed
+        const user = 'John Doe'; // Assuming the current user is John Doe
+        addFeedItem(user, postContent, files);
+
+        // Clear the textarea and file input after posting
+        document.getElementById('postContent').value = '';
+        document.getElementById('fileInput').value = '';
+    });
+
+    // Add event listener for overlay close button
+    const overlay = document.getElementById('overlay');
+    overlay.addEventListener('click', function (event) {
+        if (event.target === overlay) {
+            overlay.style.display = 'none';
+            const overlayContent = document.getElementById('overlayContent');
+            overlayContent.innerHTML = ''; // Clear overlay content
+        }
+    });
+});
+
+// Function to handle like button click
+function handleLikeClick(postElement) {
+    const likeButton = postElement.querySelector('.like-btn');
+    const likeCount = postElement.querySelector('.like-count');
+
+    // Check if the post is already liked by the user
+    const isLiked = likeButton.classList.contains('liked');
+
+    // Toggle like status and update like count
+    if (isLiked) {
+        likeButton.classList.remove('liked');
+        let currentLikes = parseInt(likeCount.textContent);
+        currentLikes--;
+        likeCount.textContent = currentLikes;
+    } else {
+        likeButton.classList.add('liked');
+        let currentLikes = parseInt(likeCount.textContent);
+        currentLikes++;
+        likeCount.textContent = currentLikes;
+    }
+}
+
+// Function to handle comment button click
+function handleCommentClick(postElement) {
+    const commentInput = postElement.querySelector('.comment-input');
+    const commentContent = commentInput.value.trim();
+    const commentList = postElement.querySelector('.post-comments');
+    const commentCount = postElement.querySelector('.comment-count');
+
+    if (commentContent !== '') {
+        const newComment = document.createElement('div');
+        newComment.textContent = commentContent;
+
+        // Create a delete button for the comment
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.classList.add('delete-comment-btn');
+        deleteButton.addEventListener('click', function () {
+            // Remove the comment from the DOM
+            commentList.removeChild(newComment);
+            // Decrement the comment count
+            let currentComments = parseInt(commentCount.textContent);
+            currentComments--;
+            commentCount.textContent = currentComments;
+        });
+
+        // Append the delete button to the comment
+        newComment.appendChild(deleteButton);
+
+        // Append the comment to the comment list
+        commentList.appendChild(newComment);
+        commentInput.value = '';
+
+        // Increment the comment count
+        let currentComments = parseInt(commentCount.textContent);
+        currentComments++;
+        commentCount.textContent = currentComments;
+    }
+}
+
+// Function to handle deleting a comment button click
+function handleDeleteCommentButtonClick(commentElement, commentCount) {
+    return function () {
+        commentElement.parentNode.removeChild(commentElement);
+        // Decrement the comment count
+        let currentComments = parseInt(commentCount.textContent);
+        currentComments--;
+        commentCount.textContent = currentComments;
+    };
+}
+
+// Function to add event listeners for comment buttons
+function addCommentEventListeners() {
+    const commentButtons = document.querySelectorAll('.comment-btn');
+    commentButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            const postElement = this.parentNode;
+            handleCommentClick(postElement);
+        });
+    });
+}
+
+// Function to add a new feed item (post) to the feeds section
+function addFeedItem(user, content, files) {
+    // Create a new feed item element
+    const newFeedItem = document.createElement('div');
+    newFeedItem.classList.add('feed-item');
+
+    const newUser = document.createElement('p');
+    newUser.classList.add('feed-user');
+    newUser.textContent = user;
+
+    const newContent = document.createElement('p');
+    newContent.classList.add('feed-content');
+    newContent.textContent = content;
+
+    const likes = document.createElement('button');
+    likes.textContent = 'Like';
+    likes.classList.add('like-btn');
+    likes.addEventListener('click', () => handleLikeClick(newFeedItem));
+
+    const likeCount = document.createElement('span');
+    likeCount.textContent = '0';
+    likeCount.classList.add('like-count');
+
+    const comments = document.createElement('button');
+    comments.textContent = 'Comment';
+    comments.classList.add('comment-btn');
+    comments.addEventListener('click', () => handleCommentClick(newFeedItem));
+
+    const commentInput = document.createElement('input');
+    commentInput.setAttribute('type', 'text');
+    commentInput.classList.add('comment-input');
+    commentInput.setAttribute('placeholder', 'Add a comment...');
+
+    const commentCount = document.createElement('span');
+    commentCount.textContent = '0';
+    commentCount.classList.add('comment-count');
+
+    const commentList = document.createElement('div');
+    commentList.classList.add('post-comments');
+
+    // Append elements to the new feed item
+    newFeedItem.appendChild(newUser);
+    newFeedItem.appendChild(newContent);
+    newFeedItem.appendChild(likes);
+    newFeedItem.appendChild(likeCount);
+    newFeedItem.appendChild(commentInput);
+    newFeedItem.appendChild(comments);
+    newFeedItem.appendChild(commentCount);
+    newFeedItem.appendChild(commentList);
+
+    // Display uploaded files
+    if (files.length > 0) {
+        const fileContainer = document.createElement('div');
+        fileContainer.classList.add('post-files');
+
+        files.forEach(file => {
+            const fileType = file.type.startsWith('image') ? 'image' : 'video';
+            const fileURL = URL.createObjectURL(file);
+
+            if (fileType === 'image') {
+                const image = document.createElement('img');
+                image.src = fileURL;
+                image.classList.add('post-image');
+                image.addEventListener('click', function () {
+                    openOverlay(fileURL, 'image');
+                });
+                fileContainer.appendChild(image);
+            } else {
+                const video = document.createElement('video');
+                video.src = fileURL;
+                video.controls = true;
+                video.classList.add('post-video');
+                video.addEventListener('click', function () {
+                    openOverlay(fileURL, 'video');
+                });
+                fileContainer.appendChild(video);
+            }
+        });
+
+        newFeedItem.insertBefore(fileContainer, newContent.nextSibling);
+    }
+
+    // Insert the new feed item into the feeds section
+    const feeds = document.getElementById('feeds');
+    feeds.insertBefore(newFeedItem, feeds.firstChild);
+}
+
+// Function to open overlay with full-size image or video
+function openOverlay(fileURL, fileType) {
+    const overlay = document.getElementById('overlay');
+    const overlayContent = document.getElementById('overlayContent');
+
+    // Clear previous content
+    overlayContent.innerHTML = '';
+
+    if (fileType === 'image') {
+        const image = document.createElement('img');
+        image.src = fileURL;
+        image.classList.add('overlay-image');
+        overlayContent.appendChild(image);
+    } else {
+        const video = document.createElement('video');
+        video.src = fileURL;
+        video.controls = true;
+        video.classList.add('overlay-video');
+        overlayContent.appendChild(video);
+    }
+
+    // Show overlay
+    overlay.style.display = 'flex';
+}
+
+</script>
+
+<!-- defult posts for demo -->
+<script>
+ // Default array of posts
+const defaultPosts = [
+    {
+        id: 1,
+        content: "good day guys, am a fresh developer waiting to be employed, location lagos.",
+        image: "./freelance-images/developer.jpg",
+        video: null,
+        likes: 3,
+        comments: ["Great post!", "Really interesting!", "Thanks for sharing!"]
+    },
+    {
+        id: 2,
+        content: "hello good day.",
+        image: "./freelance-images/male cook.jpg",
+        video: null,
+        likes: 3,
+        comments: ["Nice picture!", "Awesome!", "Love it!"]
+    },
+    {
+        id: 3,
+        content: "gooday nigeria.",
+        image: null,
+        video: "./videos/default.mp4",
+        likes: 3,
+        comments: ["Cool video!", "Amazing!", "Very informative!"]
+    }
+];
+
+// Function to add posts to the feeds container
+function addDefaultPosts() {
+    const feedsContainer = document.getElementById("feeds");
+
+    // Loop through the default posts array
+    defaultPosts.forEach(post => {
+        const postElement = document.createElement("div");
+        postElement.classList.add("feed-item");
+
+        // Post content
+        const postContent = document.createElement("div");
+        postContent.classList.add("post-content");
+        postContent.textContent = post.content;
+        postElement.appendChild(postContent);
+
+        // Post image
+        if (post.image) {
+            const imageElement = document.createElement("img");
+            imageElement.src = post.image;
+            imageElement.classList.add("post-image");
+            imageElement.addEventListener('click', function () {
+                openOverlay(post.image, 'image');
+            });
+            postElement.appendChild(imageElement);
+        }
+
+        // Post video
+        if (post.video) {
+            const videoElement = document.createElement("video");
+            videoElement.src = post.video;
+            videoElement.controls = true;
+            videoElement.classList.add("post-video");
+            videoElement.addEventListener('click', function () {
+                openOverlay(post.video, 'video');
+            });
+            postElement.appendChild(videoElement);
+        }
+
+        // Like button and count
+        const likeButton = document.createElement("button");
+        likeButton.textContent = "Like";
+        likeButton.classList.add("like-btn");
+        const likeCount = document.createElement("span");
+        likeCount.textContent = post.likes;
+        likeCount.classList.add("like-count");
+        likeButton.addEventListener("click", () => handleLikeClick(postElement));
+        postElement.appendChild(likeButton);
+        postElement.appendChild(likeCount);
+
+        // Comment button and count
+        const commentButton = document.createElement("button");
+        commentButton.textContent = "Comment";
+        commentButton.classList.add("comment-btn");
+        const commentCount = document.createElement("span");
+        commentCount.textContent = post.comments.length;
+        commentCount.classList.add("comment-count");
+        commentButton.addEventListener("click", () => handleCommentClick(postElement));
+        postElement.appendChild(commentButton);
+        postElement.appendChild(commentCount);
+
+        // Comment input
+        const commentInput = document.createElement("input");
+        commentInput.setAttribute("type", "text");
+        commentInput.classList.add("comment-input");
+        commentInput.setAttribute("placeholder", "Add a comment...");
+        postElement.appendChild(commentInput);
+
+        // Comment list
+        const commentList = document.createElement("div");
+        commentList.classList.add("post-comments");
+        post.comments.forEach(comment => {
+            const commentElement = document.createElement("div");
+            commentElement.textContent = comment;
+            commentList.appendChild(commentElement);
+        });
+        postElement.appendChild(commentList);
+
+        feedsContainer.appendChild(postElement);
+    });
+}
+
+// Call the function to add default posts when the page loads
+window.addEventListener("load", addDefaultPosts);
+
+// Function to open overlay with full-size image or video
+function openOverlay(fileURL, fileType) {
+    const modal = document.getElementById('videoModal');
+    const modalVideo = document.getElementById('modalVideo');
+
+    if (fileType === 'image') {
+        const image = document.createElement('img');
+        image.src = fileURL;
+        image.classList.add('overlay-image');
+        modalVideo.parentNode.replaceChild(image, modalVideo);
+    } else {
+        modalVideo.src = fileURL;
+    }
+
+    // Show modal
+    const bootstrapModal = new bootstrap.Modal(modal);
+    bootstrapModal.show();
+}
+
+
+</script>
+
+
+
+<!-- news and jobs -->
+<script>
+// JavaScript code
+document.addEventListener('DOMContentLoaded', function () {
+    // Define default job descriptions
+    const defaultJobDescriptions = [
+        {
+            company: "obt-tech",
+            image: "freelance-images/company-1.jpg",
+            title: "Web Developer",
+            location: "New York",
+            period: "Full-time",
+            link: "web_developer.html" // Link to the default page for the job
+        },
+        {
+            company: "obt-tech",
+            image: "freelance-images/company-2.jpg",
+            title: "Graphic Designer",
+            location: "Los Angeles",
+            period: "Part-time",
+            link: "graphic_designer.html" // Link to the default page for the job
+        },
+        {
+            company: "obt-tech",
+            image: "freelance-images/company-3.jpg",
+            title: "Software Engineer",
+            location: "San Francisco",
+            period: "Remote",
+            link: "software_engineer.html" // Link to the default page for the job
+        },
+        // Add the provided job description
+        {
+            company: "obt-tech",
+            image: "freelance-images/company-4.jpg",
+            title: "Software Engineer",
+            location: "San Francisco",
+            period: "Remote",
+            link: "software_engineer.html" // Link to the default page for the job
+        }
+        // Add more job descriptions as needed
+    ];
+
+    // Generate job cards for default job descriptions
+    const jobListContainer = document.getElementById('jobList');
+    defaultJobDescriptions.forEach(job => {
+        const jobCard = createJobCard(job);
+        jobListContainer.appendChild(jobCard);
+    });
+
+    // Add event listeners to job cards
+    const jobCards = document.querySelectorAll('.job-card');
+    jobCards.forEach(card => {
+        card.addEventListener('click', function () {
+            // Redirect to the default page for the job
+            const jobLink = this.dataset.link;
+            window.location.href = jobLink;
+        });
+
+        card.addEventListener('mouseenter', function () {
+            // Handle hover event (optional)
+        });
+    });
+});
+
+// Function to create a job card HTML element
+function createJobCard(job) {
+    const jobCard = document.createElement('div');
+    jobCard.classList.add('job-card');
+    jobCard.dataset.link = job.link;
+
+        // Add company image
+        const imageElement = document.createElement('img');
+    imageElement.src = job.image;
+    imageElement.alt = job.company; // Set alt attribute to company name
+    jobCard.appendChild(imageElement);
+    
+    // Add company element
+    const companyElement = document.createElement('span');
+    companyElement.textContent = job.company;
+    jobCard.appendChild(companyElement);
+
+
+
+    const titleElement = document.createElement('h3');
+    titleElement.textContent = job.title;
+
+    const locationElement = document.createElement('p');
+    locationElement.textContent = "Location: " + job.location;
+
+    const periodElement = document.createElement('p');
+    periodElement.textContent = "Period: " + job.period;
+
+    jobCard.appendChild(titleElement);
+    jobCard.appendChild(locationElement);
+    jobCard.appendChild(periodElement);
+
+    return jobCard;
+}</script>  
+
+<!-- timeline update an modal -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    // Append the post form to the top of the timeline
+    const postForm = document.getElementById('postForm');
+    const timeline = document.querySelector('.feed-container');
+    timeline.insertBefore(postForm, timeline.firstChild);
+
+    // Add event listener for comment buttons
+    addCommentEventListeners();
+
+    // Add event listener for form submission (posting new content)
+    postForm.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        // Get the post content from the textarea
+        const postContent = document.getElementById('postContent').value.trim();
+        // Get the files selected by the user
+        const files = Array.from(document.getElementById('fileInput').files);
+
+        if (postContent === '' && files.length === 0) {
+            // If both post content and files are empty, return without posting
+            return;
+        }
+
+        // Simulate posting the content to the server
+        // Here, you can implement the logic to send the post content and files to the server
+        // For demonstration, let's just display the posted content and files in the feed
+        const user = 'John Doe'; // Assuming the current user is John Doe
+        addFeedItem(user, postContent, files);
+
+        // Clear the textarea and file input after posting
+        document.getElementById('postContent').value = '';
+        document.getElementById('fileInput').value = '';
+    });
+
+    // Add event listener for overlay close button
+    const overlay = document.getElementById('overlay');
+    overlay.addEventListener('click', function (event) {
+        if (event.target === overlay) {
+            overlay.style.display = 'none';
+            const overlayContent = document.getElementById('overlayContent');
+            overlayContent.innerHTML = ''; // Clear overlay content
+        }
+    });
+});
+
+// Function to handle like button click
+function handleLikeClick(postElement) {
+    const likeButton = postElement.querySelector('.like-btn');
+    const likeCount = postElement.querySelector('.like-count');
+
+    // Check if the post is already liked by the user
+    const isLiked = likeButton.classList.contains('liked');
+
+    // Toggle like status and update like count
+    if (isLiked) {
+        likeButton.classList.remove('liked');
+        let currentLikes = parseInt(likeCount.textContent);
+        currentLikes--;
+        likeCount.textContent = currentLikes;
+    } else {
+        likeButton.classList.add('liked');
+        let currentLikes = parseInt(likeCount.textContent);
+        currentLikes++;
+        likeCount.textContent = currentLikes;
+    }
+}
+
+// Function to handle comment button click
+function handleCommentClick(postElement) {
+    const commentInput = postElement.querySelector('.comment-input');
+    const commentContent = commentInput.value.trim();
+    const commentList = postElement.querySelector('.post-comments');
+    const commentCount = postElement.querySelector('.comment-count');
+
+    if (commentContent !== '') {
+        const newComment = document.createElement('div');
+        newComment.textContent = commentContent;
+
+        // Create a delete button for the comment
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.classList.add('delete-comment-btn');
+        deleteButton.addEventListener('click', function () {
+            // Remove the comment from the DOM
+            commentList.removeChild(newComment);
+            // Decrement the comment count
+            let currentComments = parseInt(commentCount.textContent);
+            currentComments--;
+            commentCount.textContent = currentComments;
+        });
+
+        // Append the delete button to the comment
+        newComment.appendChild(deleteButton);
+
+        // Append the comment to the comment list
+        commentList.appendChild(newComment);
+        commentInput.value = '';
+
+        // Increment the comment count
+        let currentComments = parseInt(commentCount.textContent);
+        currentComments++;
+        commentCount.textContent = currentComments;
+    }
+}
+
+// Function to handle deleting a comment button click
+function handleDeleteCommentButtonClick(commentElement, commentCount) {
+    return function () {
+        commentElement.parentNode.removeChild(commentElement);
+        // Decrement the comment count
+        let currentComments = parseInt(commentCount.textContent);
+        currentComments--;
+        commentCount.textContent = currentComments;
+    };
+}
+
+// Function to add event listeners for comment buttons
+function addCommentEventListeners() {
+    const commentButtons = document.querySelectorAll('.comment-btn');
+    commentButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            const postElement = this.parentNode;
+            handleCommentClick(postElement);
+        });
+    });
+}
+
+// Function to add a new feed item (post) to the feeds section
+function addFeedItem(user, content, files) {
+    // Create a new feed item element
+    const newFeedItem = document.createElement('div');
+    newFeedItem.classList.add('feed-item');
+
+    const newUser = document.createElement('p');
+    newUser.classList.add('feed-user');
+    newUser.textContent = user;
+
+    const newContent = document.createElement('p');
+    newContent.classList.add('feed-content');
+    newContent.textContent = content;
+
+    const likes = document.createElement('button');
+    likes.textContent = 'Like';
+    likes.classList.add('like-btn');
+    likes.addEventListener('click', () => handleLikeClick(newFeedItem));
+
+    const likeCount = document.createElement('span');
+    likeCount.textContent = '0';
+    likeCount.classList.add('like-count');
+
+    const comments = document.createElement('button');
+    comments.textContent = 'Comment';
+    comments.classList.add('comment-btn');
+    comments.addEventListener('click', () => handleCommentClick(newFeedItem));
+
+    const commentInput = document.createElement('input');
+    commentInput.setAttribute('type', 'text');
+    commentInput.classList.add('comment-input');
+    commentInput.setAttribute('placeholder', 'Add a comment...');
+
+    const commentCount = document.createElement('span');
+    commentCount.textContent = '0';
+    commentCount.classList.add('comment-count');
+
+    const commentList = document.createElement('div');
+    commentList.classList.add('post-comments');
+
+    // Append elements to the new feed item
+    newFeedItem.appendChild(newUser);
+    newFeedItem.appendChild(newContent);
+    newFeedItem.appendChild(likes);
+    newFeedItem.appendChild(likeCount);
+    newFeedItem.appendChild(commentInput);
+    newFeedItem.appendChild(comments);
+    newFeedItem.appendChild(commentCount);
+    newFeedItem.appendChild(commentList);
+
+    // Display uploaded files
+    if (files.length > 0) {
+        const fileContainer = document.createElement('div');
+        fileContainer.classList.add('post-files');
+
+        files.forEach(file => {
+            const fileType = file.type.startsWith('image') ? 'image' : 'video';
+            const fileURL = URL.createObjectURL(file);
+
+            if (fileType === 'image') {
+                const image = document.createElement('img');
+                image.src = fileURL;
+                image.classList.add('post-image');
+                image.addEventListener('click', function () {
+                    openOverlay(fileURL, 'image');
+                });
+                fileContainer.appendChild(image);
+            } else {
+                const video = document.createElement('video');
+                video.src = fileURL;
+                video.controls = true;
+                video.classList.add('post-video');
+                video.addEventListener('click', function () {
+                    openOverlay(fileURL, 'video');
+                });
+                fileContainer.appendChild(video);
+            }
+        });
+
+        newFeedItem.insertBefore(fileContainer, newContent.nextSibling);
+    }
+
+    // Insert the new feed item into the feeds section
+    const feeds = document.getElementById('feeds');
+    feeds.insertBefore(newFeedItem, feeds.firstChild);
+}
+
+// Function to open overlay with full-size image or video
+function openOverlay(fileURL, fileType) {
+    const modal = document.getElementById('videoModal');
+    const modalVideo = document.getElementById('modalVideo');
+
+    if (fileType === 'image') {
+        const image = document.createElement('img');
+        image.src = fileURL;
+        image.classList.add('overlay-image');
+        modalVideo.parentNode.replaceChild(image, modalVideo);
+    } else {
+        modalVideo.src = fileURL;
+    }
+
+    // Show modal
+    const bootstrapModal = new bootstrap.Modal(modal);
+    bootstrapModal.show();
+}
+
+</script>
+
+<!-- side bar collaps javascript -->
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sidebar = document.querySelector('.sidebar');
+            const toggleButton = document.createElement('button');
+            toggleButton.innerHTML = '<i class="fas fa-bars"></i>';  // Font Awesome icon
+            toggleButton.style.position = 'fixed';
+            toggleButton.style.top = '10px';
+            toggleButton.style.left = '10px';
+            toggleButton.style.zIndex = '1000';
+            toggleButton.style.background = 'none';
+            toggleButton.style.border = 'none';
+            toggleButton.style.fontSize = '24px';
+            toggleButton.style.cursor = 'pointer';
+            document.body.appendChild(toggleButton);
+        
+            toggleButton.addEventListener('click', function () {
+                sidebar.classList.toggle('collapsed');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

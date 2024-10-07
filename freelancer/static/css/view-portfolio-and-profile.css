@@ -1,0 +1,623 @@
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+header {
+    background-color: #4267B2; 
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-input {
+padding: 8px 30px; /* Adjust as needed */
+border: none;
+border-radius: 20px; /* Adjust to match your design */
+background-color: #f7f7f7; /* Match your design */
+font-size: 14px;
+width: 200px; /* Adjust width as needed */
+transition: width 0.4s ease-in-out;
+}
+
+
+.search-input:focus {
+width: 500px;
+outline: none;
+}
+
+.search-icon {
+position: relative;
+top: 10px;
+right: 25px; /* Adjust as needed */
+transform: translateY(-50%);
+color: #555; /* Match your design */
+cursor: pointer;
+}
+
+
+/* Container styles */
+.container {
+    margin: 20px auto;
+    padding: 0 15px;
+    position: relative; /* Added position relative for absolute positioning of links */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Profile card styles */
+.profilearea {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.profilearea img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.profilearea h3,
+.profilearea h4 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.profilearea p {
+    margin-bottom: 10px;
+}
+
+/* Portfolio details styles */
+.portfolio-details {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.portfolio-details h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Previous contracts styles */
+.previous-contracts {
+    margin-bottom: 20px;
+}
+
+/* Videos styles */
+.videos,
+.picture-examples,
+.write-ups,
+.owner-updates {
+    margin-bottom: 20px;
+}
+
+.videos h3,
+.picture-examples h3,
+.write-ups h3,
+.owner-updates h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.video-embed {
+    margin-bottom: 20px;
+}
+
+.video-embed iframe {
+    border: 0;
+    border-radius: 5px;
+}
+
+.image-gallery img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.owner-updates{
+    /* background-color: #de2121; */
+    box-shadow: 0 0 10px rgba(26, 11, 233, 0.1);
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.owner-updates h3{
+   font-size: 20px;
+   color: #0056b3;
+   font-weight: bold;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.owner-updates textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.owner-updates button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.owner-updates button:hover {
+    background-color: #0056b3;
+}
+/* Placeholder */
+#postContent::placeholder {
+/* Center align placeholder text both horizontally and vertically */
+vertical-align: middle;
+line-height: inherit; /* Inherit line height */
+}
+
+#postContent {
+width: 50%;
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 5px;
+resize: none;
+margin-bottom: 10px;
+outline: none; /* Remove focus outline */
+overflow-y: visible;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+#postContent:focus {
+border-color: #4267B2; /* Facebook blue */
+}
+
+
+
+
+#postForm button {
+background-color: #4267B2; /* Facebook blue */
+color: #fff;
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+cursor: pointer;
+font-size: 14px;
+}
+
+#postForm button:hover {
+background-color: #2e4a92; /* Darker shade of Facebook blue */
+}
+
+/* Responsive styles */
+@media (max-width: 767px) {
+    .col-lg-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Additional styles */
+.profilearea-profile-card {
+    text-align: center;
+}
+
+.profilearea-profile-name {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.profilearea-category {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.profilearea-item-text {
+    font-size: 16px;
+}
+
+.profilearea-btn-primary {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.profilearea-btn-primary:hover {
+    background-color: #0056b3;
+}
+
+#portfolio-details {
+padding: 20px;
+background-color: #fff;
+margin: 20px auto;
+max-width: 800px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+border-radius: 8px;
+}
+
+/* Project Title */
+#portfolio-details h4 {
+margin: 0 0 10px;
+font-size: 1.5em;
+color: #007BFF;
+}
+
+/* Project Description */
+#portfolio-details p {
+margin: 0 0 20px;
+font-size: 1em;
+line-height: 1.5;
+}
+
+/* Image Gallery */
+.gallery {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+justify-content: center;
+}
+
+.gallery img {
+max-width: 100%;
+height: auto;
+border-radius: 5px;
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Video Embed */
+.video-embed {
+text-align: center;
+margin: 20px auto;
+}
+
+.video-embed iframe {
+width: 100%;
+max-width: 600px;
+height: 315px;
+border: none;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Write-ups Content */
+#write-ups-content {
+padding: 20px;
+background-color: #fff;
+margin: 20px auto;
+max-width: 800px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+border-radius: 8px;
+}
+
+/* Form Styles */
+form {
+display: flex;
+flex-direction: column;
+gap: 10px;
+margin: 20px auto;
+max-width: 800px;
+background-color: #fff;
+padding: 20px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+border-radius: 8px;
+}
+
+form input[type="text"],
+form textarea,
+form input[type="file"] {
+padding: 10px;
+font-size: 1em;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+form button {
+padding: 10px 20px;
+font-size: 1em;
+color: #fff;
+background-color: #007BFF;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+form button:hover {
+background-color: #0056b3;
+}
+
+
+
+
+.timeline{
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    overflow-y: hidden; 
+
+}
+
+
+
+.timeline-heading{
+    color: #0056b3;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+
+
+}
+.timeline-heading>h3{
+    color: #0056b3;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: gold;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    border: 2px solid #4267B2;
+
+}
+
+.timeline-details{
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 10px;
+    height: 70vh;
+    overflow-y: scroll;
+
+
+}
+.timeline-details::-webkit-scrollbar{
+    display: none;
+}
+/* time line posts to handle owneras update datas recive from user input */
+.timeline-details .post {
+border: 1px solid #ddd;
+padding: 10px;
+margin-bottom: 10px;
+border-radius: 5px;
+background-color: #fff;
+box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.timeline-details .post p {
+margin: 0 0 10px;
+font-size: 14px;
+line-height: 1.5;
+}
+
+.timeline-details .file-attachments img,
+.timeline-details .file-attachments video {
+max-width: 100%;
+max-height: 400px; /* Control maximum height */
+margin-bottom: 10px;
+display: block;
+object-fit: cover; /* Ensures aspect ratio is maintained */
+cursor: pointer; /* Indicate that the media is clickable */
+}
+
+.timeline-details .file-attachments {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+}
+
+.timeline-details .file-attachments img,
+.timeline-details .file-attachments video {
+flex: 1 1 auto;
+max-width: calc(50% - 10px); /* Ensure two media files per row */
+}
+
+/* Modal styling */
+.modal {
+display: none;
+position: fixed;
+z-index: 1;
+padding-top: 60px;
+left: 30%;
+top: 0;
+width: 40%;
+height: 100vh;
+overflow: auto;
+background-color: #2e4a92;
+}
+
+.modal .modal-content {
+margin: auto;
+display: block;
+max-width: 90%;
+max-height: 90%;
+}
+
+.modal .close {
+position: absolute;
+top: 15px;
+right: 35px;
+color: #fff;
+font-size: 40px;
+font-weight: bold;
+cursor: pointer;
+}
+
+/* Footer Content */
+
+.footer{
+
+background-color: #4267B2; /* Facebook blue */
+color: #fff;
+padding: 10px 0;
+text-align: center;        
+margin-bottom: 20px;
+}
+.footer-content {
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+text-align: center;
+
+}
+.footer-container{
+width: 80%;
+margin: auto;
+}
+
+.footer-section {
+width: 30%; /* Adjust as needed */
+margin-bottom: 20px;
+}
+
+.footer-section h3 {
+color: #fff;
+font-size: 18px;
+margin-bottom: 10px;
+}
+
+.footer-section p {
+color: #ccc;
+font-size: 14px;
+line-height: 1.6;
+}
+
+.footer-section ul {
+list-style: none;
+padding: 0;
+}
+
+.footer-section ul li {
+margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+color: #ccc;
+text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+color: #fff;
+}
+
+.social-meia-links{
+width: 40%;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+padding: 0px 20px;
+font-size: 25px;
+
+}
+.social-meia-links a{
+text-decoration: none;
+color: gold;
+background-color: #0080ff;
+padding: 5px;
+border-radius: 50%;
+box-shadow: -3px -1px 0px #ffd700;
+
+}
+
+.fa-facebook-f:hover{
+transform: translateY(10px);
+}
+.fa-instagram:hover{
+transform: translateY(10px);
+}
+
+.fa-twitter:hover{
+transform: translateY(10px);
+}
+.fa-tiktok:hover{
+transform: translateY(10px);
+}
+
+.social-space{
+background-color: white;
+padding: 0.1px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+align-items: center;
+margin-top: 20px;
+border-top: 1px solid #ccc;
+padding-top: 10px;
+}
+
+.footer-bottom p {
+color: #ccc;
+font-size: 14px;
+text-align: center;
+}
+
+.social-icons a {
+color: #ccc;
+font-size: 20px;
+margin-left: 10px;
+}
+
+.social-icons a:hover {
+color: #fff;
+}
+
+/* Social Icons */
+.social-icons {
+display: flex;
+align-items: center;
+}
+
+.social-icons a {
+color: #ccc;
+font-size: 20px;
+margin-left: 10px;
+transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+color: #4267B2; /* Facebook blue */
+}
+
+/* Footer Hover Effects */
+.footer-section:hover h3 {
+color: #fcfdfe; /* Facebook blue */
+}
+
+.footer-section:hover p {
+color: #fff;
+}
+
+.footer-section ul li a:hover {
+color: #fcfcfd; /* Facebook blue */
+}
+
+.footer-bottom p:hover {
+color: #f0f2f5; /* Facebook blue */
+}
+

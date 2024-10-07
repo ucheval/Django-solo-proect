@@ -1,0 +1,643 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancer Portfolio | Freelancers Connect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/view-portfolio-and-profile.css' %}">
+
+
+ 
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">Freelancer Connect</a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="dashboard.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./profile.html">Eidt Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./view-portfolio-and-profile.html">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./freelancer-search.html">Search</a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="search-container">
+                                <input type="search" name="" id="search" placeholder="Search here" class="search-input">
+                                <i class="fas fa-search search-icon"></i>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./messenger.html">Messenger</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="row">
+            <!-- Profile Section -->
+            <div class="col-lg-4 rounded-3">
+                <div class="profilearea" id="profileContainer">
+                    <!-- Profile card will be dynamically generated here -->
+                </div>
+            </div>
+            <!-- Portfolio Details Column -->
+            <div class="col-lg-8">
+                <div class="portfolio-details">
+                    <h2>Portfolio Details</h2>
+                    <!-- Previous Contracts -->
+                    <div class="previous-contracts" id="portfolio-details">
+                        <!-- generated portfolio from the information of the user will show here -->
+                    </div>
+                    <!-- Videos -->
+                    <div class="videos">
+                        <h3>Videos</h3>
+                        <!-- Video Embeds -->
+                        <div class="video-embed">
+                            <iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <!-- Add more video embeds as needed -->
+                    </div>
+                    <!-- Picture Examples -->
+                    <div class="picture-examples">
+                        <h3>Picture Examples</h3>
+                        <!-- Image Gallery -->
+                        <div class="image-gallery" id="image-gallery">
+                            <!-- Image elements will be dynamically generated here -->
+                        </div>
+                    </div>
+                    <!-- Write-ups -->
+                    <div class="write-ups">
+                        <h3>Write-ups</h3>
+                        <!-- Text Content -->
+                        <p id="write-ups-content"></p>
+                        <!-- Add more write-ups as needed -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="owner-updates">
+            <div class="feed-container">
+                <h3>Let everyone know what you have just created</h3>
+                <!-- Post Form -->
+                <form id="postForm" enctype="multipart/form-data">
+                    <textarea id="postContent" placeholder="What is new?"></textarea>
+                    <div class="post-options">
+                        <input type="file" id="fileInput" accept="image/*, video/*" multiple>
+                        <label for="fileInput"><i class="fas fa-camera"></i></label>
+                        <button type="submit">Post</button>
+                    </div>
+                </form>
+                <!-- End of Post Form -->
+            </div>
+        </div>
+        
+        <div class="timeline">
+            <div class="timeline-heading">
+                <h3>Timeline</h3>
+            </div>
+            <div class="timeline-details">
+                <!-- Timeline details will be generated here -->
+            </div>
+        </div>
+        
+        <!-- Modal for viewing full-size images -->
+        <div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
+        
+    </div>
+
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum, ligula nec blandit consequat, lectus eros viverra nulla, ac dapibus velit mi et sem.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>123 Main Street<br>City, Country<br>Email: info@example.com<br>Phone: +1234567890</p>
+                </div>
+            </div>
+            <div class="social-meia-links">
+                <div class="social-space"></div>
+                <div class="facebook"> <a href=""><i class="fab fa-facebook-f"></i></a></div>
+                <div class="social-space"></div>
+                <div class="instagram"><a href=""><i class="fab fa-instagram"></i></a></i></div>
+                <div class="social-space"></div>
+                <div class="twitter-x"><a href=""><i class="fab fa-twitter"></i></a></div>
+                <div class="social-space"></div>
+                <div class="tiktok"><a href=""><i class="fab fa-tiktok"></i></a></div>
+                <div class="social-space"></div>
+              </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Freelancer Connect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- portfolio javascript use only with data base-->
+    <!-- <script>
+        // Function to handle form submission and send data to the server
+        function handleFormSubmission(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get form data
+            const projectTitle = document.getElementById("projectTitle").value;
+            const projectDescription = document.getElementById("projectDescription").value;
+            const projectImages = document.getElementById("projectImages").files;
+
+            // Check if form is empty
+            if (!projectTitle && !projectDescription && projectImages.length === 0) {
+                // Create demo array
+                createDemoArray();
+            } else {
+                // Pass form details
+                passFormDetails(projectTitle, projectDescription, projectImages);
+            }
+        }
+
+        // Function to create a demo array
+        function createDemoArray() {
+            const demoPortfolio = [
+                {
+                    title: "Project Title 1",
+                    description: "Description for Project 1",
+                    images: ["example1.jpg", "example2.jpg"]
+                },
+                {
+                    title: "Project Title 2",
+                    description: "Description for Project 2",
+                    images: ["example3.jpg", "example4.jpg"]
+                }
+                // Add more default portfolio details as needed
+            ];
+
+            displayPortfolioDetails(demoPortfolio);
+        }
+
+        // Function to pass form details
+        function passFormDetails(projectTitle, projectDescription, projectImages) {
+            // Create FormData object to send files along with other form data
+            const formData = new FormData();
+            formData.append("projectTitle", projectTitle);
+            formData.append("projectDescription", projectDescription);
+            for (let i = 0; i < projectImages.length; i++) {
+                formData.append("projectImages", projectImages[i]);
+            }
+
+            // Send data to the server
+            fetch("/create-portfolio-endpoint", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log("Portfolio created successfully:", data);
+                // Optionally, provide feedback to the user
+                alert("Portfolio created successfully!");
+                // Redirect to portfolio page or update UI as needed
+            })
+            .catch(error => {
+                console.error("Error creating portfolio:", error);
+                // Optionally, provide feedback to the user
+                alert("An error occurred while creating your portfolio. Please try again later.");
+            });
+        }
+    </script>  -->
+
+    <!-- portfolio default array -->
+<script>
+    // Define a demo portfolio to display
+    const demoPortfolio = [
+        {
+            title: "Project Title 1",
+            description: "Description for Project 1",
+            images: ["./freelance-images/profile-11.jpeg", "./freelance-images/profile-19.jpeg"],
+            video: "https://www.youtube.com/embed/VIDEO_ID1"
+        },
+        {
+            title: "Project Title 2",
+            description: "Description for Project 2",
+            images: ["./freelance-images/profile-11.jpeg", "./freelance-images/profile-19.jpeg"],
+            video: "https://www.youtube.com/embed/VIDEO_ID2"
+        }
+    ];
+
+    // Function to display portfolio details
+    function displayPortfolioDetails(portfolio) {
+        const portfolioDetails = document.getElementById('portfolio-details');
+        portfolioDetails.innerHTML = ''; // Clear previous content
+
+        portfolio.forEach(project => {
+            // Create elements for each project
+            const projectTitle = document.createElement('h4');
+            projectTitle.textContent = project.title;
+
+            const projectDescription = document.createElement('p');
+            projectDescription.textContent = project.description;
+
+            // Append project title and description
+            portfolioDetails.appendChild(projectTitle);
+            portfolioDetails.appendChild(projectDescription);
+
+            // Display images
+            const imageGallery = document.getElementById('image-gallery');
+            imageGallery.innerHTML = ''; // Clear previous images
+            project.images.forEach(imageSrc => {
+                const img = document.createElement('img');
+                img.src = imageSrc;
+                img.alt = project.title;
+                imageGallery.appendChild(img);
+            });
+
+            // Display video
+            const videoEmbed = document.querySelector('.video-embed iframe');
+            videoEmbed.src = project.video;
+
+            // Display write-ups
+            const writeUpsContent = document.getElementById('write-ups-content');
+            writeUpsContent.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut metus urna. Donec eu nibh nec metus luctus lacinia non vitae tortor.";
+        });
+    }
+
+    // Function to handle form submission and send data to the server
+    function handleFormSubmission(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Get form data
+        const projectTitle = document.getElementById("projectTitle").value;
+        const projectDescription = document.getElementById("projectDescription").value;
+        const projectImages = document.getElementById("projectImages").files;
+
+        // Check if form is empty
+        if (!projectTitle && !projectDescription && projectImages.length === 0) {
+            // Create demo array
+            displayPortfolioDetails(demoPortfolio);
+        } else {
+            // Pass form details
+            passFormDetails(projectTitle, projectDescription, projectImages);
+        }
+    }
+
+    // Function to pass form details
+    function passFormDetails(projectTitle, projectDescription, projectImages) {
+        // Create FormData object to send files along with other form data
+        const formData = new FormData();
+        formData.append("projectTitle", projectTitle);
+        formData.append("projectDescription", projectDescription);
+        for (let i = 0; i < projectImages.length; i++) {
+            formData.append("projectImages", projectImages[i]);
+        }
+
+        // Send data to the server
+        fetch("/create-portfolio-endpoint", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log("Portfolio created successfully:", data);
+            // Optionally, provide feedback to the user
+            alert("Portfolio created successfully!");
+            // Redirect to portfolio page or update UI as needed
+        })
+        .catch(error => {
+            console.error("Error creating portfolio:", error);
+            // Optionally, provide feedback to the user
+            alert("An error occurred while creating your portfolio. Please try again later.");
+        });
+    }
+
+    // Initialize default portfolio details
+    displayPortfolioDetails(demoPortfolio);
+
+    // Add event listener for form submission
+    document.getElementById('postForm').addEventListener('submit', handleFormSubmission);
+</script>
+
+<!-- profile with data base -->
+<!-- <script>
+    // Define an array to store profile data
+    let profiles = []; // This array will store the profile data pushed from the profile page
+
+    // Define a demo profile to display when there are no registered users
+    const demoProfile = {
+        id: 13,
+        name: "Valentine Uchenna",
+        category: "Web Developer",
+        skills: ["HTML", "CSS", "JavaScript"],
+        img: "./freelance-images/uche.jpg",
+        bio: "Experienced web developer with expertise in front-end technologies.",
+        contact: "valentinevalobt@gmail.com",
+    };
+
+    // Function to retrieve profile data from local storage
+    function retrieveProfiles() {
+        let storedProfiles = localStorage.getItem('profiles');
+        if (storedProfiles) {
+            profiles = JSON.parse(storedProfiles);
+        }
+    }
+
+    // Function to generate profile card for the first profile (either from local storage or default profiles)
+    function generateSingleProfileCard() {
+        let profileContainer = document.getElementById('profileContainer');
+        profileContainer.innerHTML = ''; // Clear previous profile card
+
+        // Get the first profile from either stored profiles or default profiles
+        let profile = profiles.length > 0 ? profiles[0] : demoProfile;
+
+        // Create profile card elements
+        let profileCard = document.createElement('div');
+        profileCard.classList.add('profilearea', 'profilearea-profile-card');
+
+        let profileImage = document.createElement('img');
+        profileImage.src = profile.img;
+        profileImage.classList.add('profilearea-profile-image');
+        profileImage.alt = 'Profile Image';
+
+        let profileName = document.createElement('h3');
+        profileName.classList.add('profilearea-profile-name');
+        profileName.textContent = profile.name;
+
+        let profileCategory = document.createElement('h4');
+        profileCategory.classList.add('profilearea-category');
+        profileCategory.textContent = profile.category;
+
+        let profileInfo = document.createElement('p');
+        profileInfo.classList.add('profilearea-item-text');
+        profileInfo.textContent = profile.bio;
+
+        let viewProfileLink = document.createElement('a');
+        viewProfileLink.href = 'mailto:' + profile.contact;
+        viewProfileLink.classList.add('btn', 'btn-primary', 'profilearea-btn-primary');
+        viewProfileLink.textContent = 'Profile & Portfolio';
+
+        // Append elements to profile card
+        profileCard.appendChild(profileImage);
+        profileCard.appendChild(profileName);
+        profileCard.appendChild(profileCategory);
+        profileCard.appendChild(profileInfo);
+        profileCard.appendChild(viewProfileLink);
+
+        // Append profile card to container
+        profileContainer.appendChild(profileCard);
+    }
+
+    // Retrieve profile data from local storage and generate profile card when the page loads
+    retrieveProfiles();
+    generateSingleProfileCard();
+</script> -->
+
+    <!-- a default demo profile -->
+    <script>
+        // Define a demo profile to display
+        const profiles = [{
+            id: 13,
+            name: "Valentine Uchenna",
+            category: "Web Developer",
+            skills: ["HTML", "CSS", "JavaScript"],
+            img: "./freelance-images/uche.jpg",
+            bio: "Experienced web developer with expertise in front-end technologies.",
+            contact: "valentinevalobt@gmail.com",
+        }];
+
+        // Function to generate profile card for the default profile
+        function generateSingleProfileCard() {
+            let profileContainer = document.getElementById('profileContainer');
+            profileContainer.innerHTML = ''; // Clear previous profile card
+
+            // Get the default profile
+            let profile = profiles[0];
+
+            // Create profile card elements
+            let profileCard = document.createElement('div');
+            profileCard.classList.add('profilearea', 'profilearea-profile-card');
+
+            let profileImage = document.createElement('img');
+            profileImage.src = profile.img;
+            profileImage.classList.add('profilearea-profile-image');
+            profileImage.alt = 'Profile Image';
+
+            let profileName = document.createElement('h3');
+            profileName.classList.add('profilearea-profile-name');
+            profileName.textContent = profile.name;
+
+            let profileCategory = document.createElement('h4');
+            profileCategory.classList.add('profilearea-category');
+            profileCategory.textContent = profile.category;
+
+            let profileInfo = document.createElement('p');
+            profileInfo.classList.add('profilearea-item-text');
+            profileInfo.textContent = profile.bio;
+
+            let viewProfileLink = document.createElement('a');
+            viewProfileLink.href = './messenger.html';
+            viewProfileLink.classList.add('btn', 'btn-primary', 'profilearea-btn-primary');
+            viewProfileLink.textContent = 'Messenger';
+
+            // Append elements to profile card
+            profileCard.appendChild(profileImage);
+            profileCard.appendChild(profileName);
+            profileCard.appendChild(profileCategory);
+            profileCard.appendChild(profileInfo);
+            profileCard.appendChild(viewProfileLink);
+
+            // Append profile card to container
+            profileContainer.appendChild(profileCard);
+        }
+
+        // Generate profile card when the page loads
+        generateSingleProfileCard();
+    </script>
+    <!-- Profile JavaScript to be used with database only-->
+    <!-- <script>
+        // Define an array to store profile data
+        let profiles = []; // This array will store the profile data pushed from the profile page
+
+        // Define a demo profile to display when there are no registered users
+        const demoProfile = {
+            id: 13,
+            name: "Valentine Uchenna",
+            category: "Web Developer",
+            skills: ["HTML", "CSS", "JavaScript"],
+            img: "./freelance-images/uche.jpg",
+            bio: "Experienced web developer with expertise in front-end technologies.",
+            contact: "valentinevalobt@gmail.com",
+        };
+
+        // Function to retrieve profile data from local storage
+        function retrieveProfiles() {
+            let storedProfiles = localStorage.getItem('profiles');
+            if (storedProfiles) {
+                profiles = JSON.parse(storedProfiles);
+            } else {
+                // If no profiles are stored, add the demo profile to the array
+                profiles.push(demoProfile);
+            }
+        }
+
+        // Function to generate profile card for the first profile (either from local storage or default profiles)
+        function generateSingleProfileCard() {
+            let profileContainer = document.getElementById('profileContainer');
+            profileContainer.innerHTML = ''; // Clear previous profile card
+
+            // Get the first profile from either stored profiles or default profiles
+            let profile = profiles[0];
+
+            // Create profile card elements
+            let profileCard = document.createElement('div');
+            profileCard.classList.add('profilearea', 'profilearea-profile-card');
+
+            let profileImage = document.createElement('img');
+            profileImage.src = profile.img;
+            profileImage.classList.add('profilearea-profile-image');
+            profileImage.alt = 'Profile Image';
+
+            let profileName = document.createElement('h3');
+            profileName.classList.add('profilearea-profile-name');
+            profileName.textContent = profile.name;
+
+            let profileCategory = document.createElement('h4');
+            profileCategory.classList.add('profilearea-category');
+            profileCategory.textContent = profile.category;
+
+            let profileInfo = document.createElement('p');
+            profileInfo.classList.add('profilearea-item-text');
+            profileInfo.textContent = profile.bio;
+
+            let viewProfileLink = document.createElement('a');
+            viewProfileLink.href = 'mailto:' + profile.contact;
+            viewProfileLink.classList.add('btn', 'btn-primary', 'profilearea-btn-primary');
+            viewProfileLink.textContent = 'Profile & Portfolio';
+
+            // Append elements to profile card
+            profileCard.appendChild(profileImage);
+            profileCard.appendChild(profileName);
+            profileCard.appendChild(profileCategory);
+            profileCard.appendChild(profileInfo);
+            profileCard.appendChild(viewProfileLink);
+
+            // Append profile card to container
+            profileContainer.appendChild(profileCard);
+        }
+
+        // Retrieve profile data from local storage and generate profile card when the page loads
+        retrieveProfiles();
+        generateSingleProfileCard();
+    </script> -->
+
+    <!-- Owner Update JavaScript -->
+    <script>
+        document.getElementById('postForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+        
+            // Get post content
+            const postContent = document.getElementById('postContent').value;
+            const fileInput = document.getElementById('fileInput');
+            const files = fileInput.files;
+        
+            // Create a new post element
+            const postElement = document.createElement('div');
+            postElement.classList.add('post');
+        
+            // Add text content
+            const textElement = document.createElement('p');
+            textElement.textContent = postContent;
+            postElement.appendChild(textElement);
+        
+            // Handle file attachments
+            if (files.length > 0) {
+                const fileContainer = document.createElement('div');
+                fileContainer.classList.add('file-attachments');
+        
+                Array.from(files).forEach(file => {
+                    const fileURL = URL.createObjectURL(file);
+                    if (file.type.startsWith('image/')) {
+                        const img = document.createElement('img');
+                        img.src = fileURL;
+                        img.alt = file.name;
+                        img.classList.add('post-image');
+                        img.addEventListener('click', function() {
+                            openModal(fileURL);
+                        });
+                        fileContainer.appendChild(img);
+                    } else if (file.type.startsWith('video/')) {
+                        const video = document.createElement('video');
+                        video.src = fileURL;
+                        video.controls = true;
+                        fileContainer.appendChild(video);
+                    }
+                });
+        
+                postElement.appendChild(fileContainer);
+            }
+        
+            // Prepend the new post to the timeline
+            const timelineDetails = document.querySelector('.timeline-details');
+            timelineDetails.insertBefore(postElement, timelineDetails.firstChild);
+        
+            // Clear the form
+            document.getElementById('postContent').value = '';
+            fileInput.value = '';
+        });
+        
+        // Modal functionality
+        function openModal(imageURL) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.style.display = "block";
+            modalImg.src = imageURL;
+        }
+        
+        document.querySelector('.modal .close').addEventListener('click', function() {
+            document.getElementById('imageModal').style.display = "none";
+        });
+        </script>
+        
+
+
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancer Search | Freelancer Connect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/freelancer-search.css' %}">
+
+
+  </head>
+  
+
+<body>
+  <div class="container">
+    <h2>Search Freelancers</h2>
+    <div class="mb-3">
+      <input type="text" id="searchQuery" class="form-control" placeholder="Search by job title or area of specialization">
+    </div>
+    <div class="mb-3">
+      <label for="filterCountry" class="form-label">Select Country:</label>
+      <select id="filterCountry" class="form-select">
+        <option value="">Select Country</option>
+        <!-- Add options for different countries -->
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="filterState" class="form-label">Select State:</label>
+      <select id="filterState" class="form-select" disabled>
+        <option value="">Select State</option>
+        <!-- States will be dynamically populated based on the selected country -->
+      </select>
+    </div>
+    <button id="searchButton" class="btn btn-primary">Search</button>
+  </div>
+
+  <div id="searchResults" class="container">
+    <!-- Search results will be displayed here -->
+  </div>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const searchButton = document.getElementById("searchButton");
+      const searchQueryInput = document.getElementById("searchQuery");
+      const filterCountrySelect = document.getElementById("filterCountry");
+      const filterStateSelect = document.getElementById("filterState");
+      const searchResultsContainer = document.getElementById("searchResults");
+  
+      // Populate countries and their states
+      const countries = [
+        { name: "United States", states: ["California", "Texas", "New York"] },
+        { name: "Canada", states: ["Ontario", "Quebec", "British Columbia"] },
+        { name: "Nigeria", states: ["Lagos", "Abuja", "Kano"] },
+        { name: "South Africa", states: ["Gauteng", "Western Cape", "KwaZulu-Natal"] }
+        // Add more countries and their states as needed
+      ];
+
+      // Populate country select options
+      countries.forEach((country) => {
+        const option = document.createElement("option");
+        option.value = country.name;
+        option.textContent = country.name;
+        filterCountrySelect.appendChild(option);
+      });
+
+      // Event listener for selecting a country
+      filterCountrySelect.addEventListener("change", function () {
+        const selectedCountry = this.value;
+        const selectedCountryObj = countries.find((country) => country.name === selectedCountry);
+        if (selectedCountryObj) {
+          filterStateSelect.innerHTML = "<option value=''>Select State</option>"; // Clear previous states
+          selectedCountryObj.states.forEach((state) => {
+            const stateOption = document.createElement("option");
+            stateOption.value = state;
+            stateOption.textContent = state;
+            filterStateSelect.appendChild(stateOption);
+          });
+          filterStateSelect.disabled = false;
+        } else {
+          filterStateSelect.innerHTML = "<option value=''>Select State</option>"; // Clear previous states
+          filterStateSelect.disabled = true;
+        }
+      });
+
+      // Function to fetch search results from the backend
+      async function fetchSearchResults(query, country, state) {
+        try {
+          const response = await fetch(`/search?query=${query}&country=${country}&state=${state}`);
+          if (!response.ok) {
+            throw new Error("Failed to fetch search results");
+          }
+          const data = await response.json();
+          return data.results;
+        } catch (error) {
+          console.error(error);
+          return [];
+        }
+      }
+  
+      // Function to display search results
+function displaySearchResults(results) {
+    searchResultsContainer.innerHTML = ""; // Clear previous search results
+    if (results.length === 0) {
+        searchResultsContainer.innerHTML = "<p>No results found.</p>";
+    } else {
+        results.forEach((result) => {
+            // Create HTML elements to display each search result
+            const resultElement = document.createElement("div");
+            resultElement.classList.add("card", "mb-3");
+            resultElement.innerHTML = `
+                <div class="card-body">
+                    <h5 class="card-title">${result.fullName}</h5>
+                    <p class="card-text">Area of Specialization: ${result.areaOfSpecialization}</p>
+                    <p class="card-text">Location: ${result.location}</p>
+                    <p class="card-text">Availability: ${result.availability}</p>
+                    <p class="card-text">Ratings: ${result.ratings}</p>
+                    <button class="btn btn-primary contact-btn">Contact</button>
+                </div>
+            `;
+            searchResultsContainer.appendChild(resultElement);
+        });
+
+        // Add event listeners to contact buttons
+        const contactButtons = document.querySelectorAll('.contact-btn');
+        contactButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                // Assuming you have a function to handle contacting a freelancer, you can call it here
+                // For example: contactFreelancer(results[index]);
+                console.log('Contacting freelancer:', results[index]);
+            });
+        });
+    }
+}
+
+  </script>
+</body>
+</html>
